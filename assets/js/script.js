@@ -43,6 +43,8 @@ async function createLayout(url = urlDefault) {
         contador++
         row.appendChild(card)
     });
+
+    stopLoading()
 }
 
 select.addEventListener("change", ()=>{
@@ -73,4 +75,9 @@ function filterInput(name){
     let nameCountrie = name.trim()
     let newUrl = `https://restcountries.com/v3.1/name/${nameCountrie}`
     nameCountrie != "" ? createLayout(newUrl) : createLayout(urlDefault)
+}
+
+function stopLoading(){
+    let div = document.querySelector(".spinner-border")
+    div.style.display = "none"
 }
