@@ -35,7 +35,7 @@ async function createLayout(url = urlDefault) {
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><b>Population:</b> ${element.population}</li>
-          <li class="list-group-item"><b>Reegion:</b> ${element.region}</li>
+          <li class="list-group-item"><b>Region:</b> ${element.region}</li>
           <li class="list-group-item"><b>Capital:</b> ${element.capital}</li>
 
         </ul>
