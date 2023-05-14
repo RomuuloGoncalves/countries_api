@@ -1,3 +1,56 @@
+:root{
+    /* Dark mode */
+    --background: hsl(209, 23%, 22%);
+    --background-dark: hsl(207, 26%, 17%);
+
+    /* Light mode */
+    --Dark-Gray: hsl(0, 6%, 81%);
+    --Very-Light: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
 .flags{
     height: 200px;
+}
+
+*{
+    transition: 0.3s;
+    color: var(--font);
+}
+
+#input{
+    background-color: transparent;
+}
+
+#select{
+    background-color: var(--background);
+    border-radius: 4px;
+}
+
+.campo__input{
+    background-color: var(--background);
+    border-radius: 4px;
+}
+
+
+
+body{
+    background-color: var(--background-dark);
+}
+
+header{
+    background-color: var(--background);
+}
+
+.card *, .card{
+    background:var(--background) ;
+    border: var(--background);
+}
+
+.card-title{
+    background-color: transparent;
+}
+
+.dark__mode{
+    cursor: pointer;
 }
