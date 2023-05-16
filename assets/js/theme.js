@@ -27,3 +27,4 @@ function changeTheme() {
 }
 
 changeTheme()
+changeTheme()

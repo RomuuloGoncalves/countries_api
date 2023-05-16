@@ -7,6 +7,7 @@
     --Dark-Gray: hsl(0, 6%, 81%);
     --Very-Light: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
+    --font: #ffff;
 }
 
 .flags{
@@ -20,6 +21,7 @@
 
 #input{
     background-color: transparent;
+    color: var(--font);
 }
 
 #select{
