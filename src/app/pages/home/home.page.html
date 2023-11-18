@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Where in the word?
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-around">
+    <ion-col size="11" sizeMd="6">
+      <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+    </ion-col>
+
+    <ion-col size="11" sizeMd="2">
+      <ion-select label="Choose de Region" (ionChange)="selectRegion($event)" label-placement="Choose de region" interface="popover">
+        <ion-select-option value="all">All</ion-select-option>
+        <ion-select-option value="africa">Africa</ion-select-option>
+        <ion-select-option value="america">America</ion-select-option>
+        <ion-select-option value="asia">Asia</ion-select-option>
+        <ion-select-option value="oceania">Oceania</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <ion-row class="ion-justify-content-center">
+        <ng-container *ngFor="let pais of this.paisesExibir">
+          <ion-col size="12" sizeSm="6" sizeMd="3">
+            <ion-card [routerLink]="['/pais', pais.ccn3]">
+              <img alt="Silhouette of mountains" src="{{pais.flags.png}}" />
+              <ion-card-header>
+                <ion-card-title>{{pais.name.common}}</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content>
+                <ul>
+                  <li>Population: <b>{{pais.population}}</b></li>
+                  <li>Region: <b>{{pais.region}}</b></li>
+                  <li>Capital: <b>{{pais.capital}}</b></li>
+                </ul>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

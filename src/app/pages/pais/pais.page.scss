@@ -1,0 +1,13 @@
+img {
+  width: 100%;
+  box-shadow: 2px 2px 20px rgb(111, 110, 110);
+}
+
+.info {
+  gap: 30px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
